@@ -1,0 +1,38 @@
+<div class="background1">
+<div class="container">   
+<table class="table">
+<thead>
+    <tr>
+        <td></td>
+    </tr>
+    <tr>
+        <th>Sr No.</th>
+        <th>Teacher Name</th>
+        <th>Class Name</th>
+        <th>Subject</th>   
+        <th>Topic</th>
+        <th>Class Date</th>
+        <th>Time </th>
+        <th>Class Link</th>  
+        <th style="text-align:center">Action</th>
+    </tr>
+    <tr *ngFor="let item of Classes;let i=index">
+        <td>{{i+1}}</td>
+        <td>{{item.teacher.fname}}&nbsp; {{item.teacher.lname}}</td>
+        <td>{{item.classname}}</td>
+        <td>{{item.subject}}</td>
+        <td>{{item.topic}}</td>
+        <td>{{item.class_date}}</td>
+        <td>{{item.time}}</td>
+        <td>{{item.class_Link}}</td> 
+        <td>
+        <button mat-raised-button type="submit" (click)="onDelete(i)">Delete</button>
+        </td>  
+        <td>
+        <button mat-raised-button type="submit" (click)="onUpdate(item.teacher_id)">Update</button>
+        </td>              
+    </tr>
+</thead>
+</table>
+</div>
+</div>

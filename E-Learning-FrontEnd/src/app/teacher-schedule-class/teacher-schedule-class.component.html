@@ -1,0 +1,47 @@
+<div class="background">
+  <h1> "Welcome {{localvalue}}!!!"</h1>
+  
+    <div fxLayoutAlign="center center" fxFlexFill >
+      <mat-card fxFlex=40 >
+            <mat-toolbar color="primary" fxFlexFill>Schedule class Page</mat-toolbar>
+            <form class="example-form" #simpleForm="ngForm" (ngSubmit)="onClick()">
+              
+              <mat-label>Select Course</mat-label>
+              <br>
+                <mat-select [(value)]="this.classname">
+                <mat-option disable>None</mat-option>
+                <mat-option *ngFor="let c of class_name" [value]="c.cs_id"  >{{c.cs_name}}</mat-option>
+                </mat-select>
+              <br>
+
+              <mat-label>Select Subjects</mat-label>
+              <br>
+                <mat-select [(value)]="this.subject">
+                <mat-option disable>None</mat-option>
+                <mat-option *ngFor="let c of subject_array" [value]="c.cs_name"  >{{c.cs_name}}</mat-option>
+                </mat-select>
+
+              <mat-form-field class="example-full-width">
+              <input matInput placeholder="Enter Topic" name="topic" [(ngModel)]="topic" required> 
+              </mat-form-field>       
+
+              <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Choose a date</mat-label>
+                <input matInput ngModel type="date" placeholder="Date"  [(ngModel)]="class_date"  name="date" required>
+              </mat-form-field>
+
+              <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Choose a date</mat-label>
+                <input matInput ngModel type="time" placeholder="Time"  [(ngModel)]="time"  name="time" required>
+              </mat-form-field>
+              
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="Enter Your Class Link" name="classLink" [(ngModel)]="class_Link" required> 
+              </mat-form-field>       
+              <button color="primary" mat-raised-button type="submit">Submit</button>
+
+            </form>
+        </mat-card>
+    
+     </div> 
+     </div>

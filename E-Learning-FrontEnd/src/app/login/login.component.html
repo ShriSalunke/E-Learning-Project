@@ -1,0 +1,46 @@
+<div class="row">
+<div fxLayoutAlign="center center" fxFlexFill >
+
+    <mat-card fxFlex=27>
+        <mat-toolbar color="primary">Login as Admin</mat-toolbar>
+        <form class="example-form">
+            <mat-form-field class="example-full-width">
+            <input matInput placeholder="Email Id" name= "email" [(ngModel)]="a_email">
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <input matInput type="password" placeholder="Password" name="pasword" [(ngModel)]="a_password">
+            </mat-form-field>
+            <button mat-raised-button (click)="onClick3()" type="submit">Login</button>
+        </form>
+    </mat-card>
+    
+
+    <mat-card fxFlex=27 >
+        <mat-toolbar color="primary">Login as Teacher</mat-toolbar>
+        <form class="example-form">
+            <mat-form-field class="example-full-width">
+            <input matInput placeholder="Email Id" name= "email" [(ngModel)]="teacher.email">
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <input matInput type="password" placeholder="Password" name="pasword" [(ngModel)]="teacher.password">
+            </mat-form-field>
+            <button mat-raised-button (click)="onClick1()" type="submit">Login</button>
+        </form>
+    </mat-card>
+    
+    <mat-card fxFlex=27 >
+        <mat-toolbar color="primary">Login as Student</mat-toolbar>
+        <form class="example-form">
+            <mat-form-field class="example-full-width">
+            <input matInput placeholder="Email Id" name= "email" [(ngModel)]="student.email">
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <input matInput type="password" placeholder="Password" name="pasword" [(ngModel)]="student.password">
+            </mat-form-field>
+            <button mat-raised-button (click)="onClick2()" type="submit">Login</button>
+        </form>
+    </mat-card>
+    
+    
+ </div> 
+ </div>

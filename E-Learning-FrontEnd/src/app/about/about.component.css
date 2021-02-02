@@ -1,0 +1,11 @@
+.about{
+    height: 54%;
+    width: 100%;
+}
+.abc{
+    background-image: url(../../assets/images/e14.jpg);
+    background-size: 100%;
+     background-size: cover;
+
+}
+

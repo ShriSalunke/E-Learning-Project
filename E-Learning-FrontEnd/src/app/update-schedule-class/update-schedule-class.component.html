@@ -1,0 +1,40 @@
+<div class="background"> 
+<div fxLayoutAlign="center center" fxFlexFill >
+<mat-card fxFlex=40 >
+        <mat-toolbar color="primary" fxFlexFill>Update class Page</mat-toolbar>
+        <form class="example-form" #simpleForm="ngForm" (ngSubmit)="onUpdateAndSubmit(schedule)">
+        
+        <mat-label>Select Course</mat-label>
+            <mat-select [(value)]="schedule.classname" required>
+            <mat-option disable>None</mat-option>
+            <mat-option *ngFor="let c of class_name" [value]="c.cs_id"  >{{c.cs_name}}</mat-option>
+            </mat-select>
+        <br>
+
+        <mat-label>Select Subjects</mat-label>
+        <br>
+            <mat-select [(value)]="schedule.subject" required>
+            <mat-option disable>None</mat-option>
+            <mat-option *ngFor="let c of subject_array" [value]="c.cs_name"  >{{c.cs_name}}</mat-option>
+            </mat-select>
+
+        <mat-form-field class="example-full-width">
+        <input matInput placeholder="Enter Topic" name="topic" [(ngModel)]="schedule.topic" required> 
+        </mat-form-field>       
+<br>
+        <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Choose a date</mat-label>
+        <input matInput ngModel type="date" placeholder="Date"  [(ngModel)]="schedule.class_date"  name="date" >
+        </mat-form-field>
+<br>        
+        <mat-form-field class="example-full-width">
+        <input matInput placeholder="Enter Your Class Link" [(ngModel)]="schedule.class_Link" name="classLink" required> 
+        </mat-form-field>  
+<br>     
+        <button color="primary" mat-raised-button type="submit">Update and Submit</button>
+
+        </form>
+    </mat-card>
+
+</div> 
+</div>

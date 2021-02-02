@@ -1,0 +1,48 @@
+<div class="background">
+
+  <div class="container" style="width: 40%;">      
+    <table class="container" >  
+      <tr><th>Select Course</th>
+      <td>
+        <select id="class" class="form-control" [(ngModel)]="schedule.classname" required>
+          <option selected disabled class="form-control">Choose Class </option>
+                  <option value="1" class="form-control"> Class 1 </option>
+                  <option value="2" class="form-control"> Class 2  </option>
+                  <option value="3" class="form-control"> Class 3  </option>
+                  <option value="4" class="form-control"> Class 4 </option>
+                  <option value="5" class="form-control"> Class 5  </option>
+                  <option value="6" class="form-control"> Class 6 </option>
+                  <option value="7" class="form-control"> Class 7  </option>
+                  <option value="8" class="form-control"> Class 8  </option>
+                  <option value="9" class="form-control"> Class 9 </option>
+                  <option value="10" class="form-control"> Class 10  </option>
+                  <option value="11" class="form-control"> Class 11  </option>
+                  <option value="12" class="form-control"> Class 12  </option>
+        </select>
+    </td>
+    </tr>
+    <tr>
+      <th>Choose Subject</th>
+    <td>
+    <select id="subject"  class="form-control" [(ngModel)]="schedule.subject" required>
+      <option selected disabled  class="form-control">Choose Class </option>
+      <option value="Hindi" class="form-control"> Hindi </option>
+      <option value="English" class="form-control"> English  </option>
+      <option value="Envoirnment" class="form-control"> Envoirnment  </option>
+      <option value="Maths" class="form-control"> Maths </option>
+      <option value="History" class="form-control"> History  </option>
+      <option value="Geography" class="form-control"> Geography </option>
+      <option value="Civics" class="form-control"> Civics  </option>
+      <option value="Physics" class="form-control"> Physics  </option>
+      <option value="Chemistry" class="form-control"> Chemistry </option>
+      <option value="Biology" class="form-control"> Biology  </option>
+      <option value="Accounts" class="form-control"> Accounts  </option>
+      <option value="Commerce" class="form-control"> Commerce  </option>
+      
+    </select>
+    </td>
+    </table>
+    <button color="primary" mat-raised-button type="button" (click)="onClick()" style="width: 100%;" (click)="onClick()">Submit</button>
+  
+  </div>
+  </div>

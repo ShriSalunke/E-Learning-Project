@@ -1,0 +1,37 @@
+<div class="background">
+
+<div fxLayoutAlign="center center" fxFlexFill >
+  <mat-card fxFlex=40 >
+        <mat-toolbar color="primary">Registration Page</mat-toolbar>
+        <form class="example-form" #simpleForm="ngForm" (ngSubmit)="getValues()">
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="First Name" name="Firstname" [(ngModel)]="teacher.fname" #name ="ngModel"required> 
+            </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <input matInput ngModel placeholder="Last Name" [(ngModel)]="teacher.lname" name="Lastname" required> 
+            </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <input matInput ngModel placeholder="Address " [(ngModel)]="teacher.address" name="Address"> 
+            </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <input matInput ngModel placeholder="Contact Number" [(ngModel)]="teacher.contact_number" name="Contact_Number" required maxlength="10" minlength="10"> 
+           
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <input matInput ngModel placeholder="Year Of Experience " [(ngModel)]="teacher.yearOfExp" name="YearOfExp" required> 
+            </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <input matInput ngModel placeholder="Email" name="Email" [(ngModel)]="teacher.email"required> 
+            </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <input matInput ngmodel type="password" placeholder="Password" name="Password" [(ngModel)]="teacher.password"required>
+           </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <input matInput ngmodel type="password" placeholder="Confirm Password" name="Confirm_Password" [(ngModel)]="teacher.confirm_password" required>
+            </mat-form-field>
+          <button mat-raised-button type="submit" >Submit</button>
+          </form>
+    </mat-card>
+
+ </div> 
+ </div>

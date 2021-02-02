@@ -1,0 +1,26 @@
+<div class="background">
+<div fxLayoutAlign="center center" fxFlexFill >
+    <mat-card fxFlex=40 >
+          <mat-toolbar color="primary">Registration Page</mat-toolbar>
+          <form class="example-form" (ngSubmit)="getValues()">
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="First Name" [(ngModel)]="student.fname" name ="Firstname"required> 
+              </mat-form-field>
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Last Name" [(ngModel)]="student.lname" name="Lastname" required> 
+              </mat-form-field>
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Email" [(ngModel)]="student.email"  name="Email" required> 
+              </mat-form-field>
+            <mat-form-field class="example-full-width">
+              <input matInput type="password" placeholder="Password" [(ngModel)]="student.password"  name="Password" required>
+              </mat-form-field>
+            <mat-form-field class="example-full-width">
+              <input matInput type="password" placeholder="Confirm Password" [(ngModel)]="student.confirm_password"  name="Confirm_Password" required>
+              </mat-form-field>
+            <button mat-raised-button type="submit">Submit</button>
+          </form>
+      </mat-card>
+  
+   </div> 
+   </div>
